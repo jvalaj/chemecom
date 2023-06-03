@@ -1,4 +1,4 @@
-const Navbar = () => {
+const cartPage = () => {
     return (
         <div>
 
@@ -6,4 +6,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default cartPage;
