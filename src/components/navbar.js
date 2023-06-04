@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu , AiOutlineShoppingCart } from 'react-icons/ai';
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
 
@@ -28,8 +28,10 @@ const Navbar = () => {
                     <li className="hover:text-teal-400 text-white">
                         <NavLink to="/products">Products</NavLink>
                         </li>
-                        <li className="hover:text-teal-400 text-white">
-                        <NavLink to="/cart">Cart</NavLink>
+                        <li className="hover:text-teal-400 flex items-center text-white">
+                        <NavLink to="/cart">
+                        <AiOutlineShoppingCart className="text-white hover:text-teal-400" size={20}/>
+                        </NavLink>
                         </li>
                 </ul>
 
