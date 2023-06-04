@@ -8,10 +8,12 @@ import Signup from './pages/signup';
 import Product from './pages/product';
 import Products from './pages/products';
 import Error from './pages/error';
+import Navbar from './components/navbar';
 
 const App = () => {
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path='/' element ={ <Home/>}/>
         <Route path='/product/:id' element ={ <Product/>}/>

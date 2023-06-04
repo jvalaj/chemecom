@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
@@ -19,16 +19,18 @@ const Navbar = () => {
                 </a>
 
                 <ul className='hidden sm:flex sm:gap-8 sm:text-white'>
-                    <li>
-                        <a href="#">
-                            Home
-                            </a>
+                    <li className="hover:text-teal-400 text-white">
+                        <NavLink to="/">Home</NavLink>
                     </li>
-                    <li>
-                        <a href="#">
-                            About
-                        </a>
+                    <li className="hover:text-teal-400 text-white">
+                        <NavLink to="/about">About</NavLink>
                     </li>
+                    <li className="hover:text-teal-400 text-white">
+                        <NavLink to="/products">Products</NavLink>
+                        </li>
+                        <li className="hover:text-teal-400 text-white">
+                        <NavLink to="/cart">Cart</NavLink>
+                        </li>
                 </ul>
 
                 <div onClick={handleNav} className={toggle ? 'hidden': ' hover:bg-white hover:text-black sm:hidden border border-white p-2 rounded-md'}>
@@ -41,30 +43,18 @@ const Navbar = () => {
                     
                     <ul className="gap-y-14 items-center my-auto bg-zinc-700 flex-col text-xl flex">
                         <li className="hover:text-teal-400 text-white">
-                            <a href="#">
-                                Home
-                                </a>
+                        <NavLink to="/about">Home</NavLink>
                         </li>
                         <li className="hover:text-teal-400 text-white">
-                            <a href="#">
-                                Products
-                            </a>
+                        <NavLink to="/about">About</NavLink>
                         </li>
                         <li className="hover:text-teal-400 text-white">
-                            <a href="#">
-                                About
-                            </a>
+                        <NavLink to="/products">Products</NavLink>
                         </li>
                         <li className="hover:text-teal-400 text-white">
-                            <a href="#">
-                            Cart
-                            </a>
+                        <NavLink to="/cart">Cart</NavLink>
                         </li>
-                        <li className="hover:text-teal-400 text-white">
-                            <a href="#">
-                                Login / Signup
-                            </a>
-                        </li>
+                        
                     
                     </ul>
                 </div>
