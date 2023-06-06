@@ -1,7 +1,20 @@
 import React from 'react'
 import data from "../database/products.json";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Products = ({handleAddProduct}) => {
+
+  const Alert = () => {
+    toast.success('Added To Cart', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
   return (
         
         <div className='max-w-screen-lg mx-auto mt-6 flex justify-center flex-col'>
@@ -17,16 +30,31 @@ const Products = ({handleAddProduct}) => {
       {
         data.map((item) => (
           
-            <div className="h-50 sm:h-80 m-3 border rounded-lg shadow bg-gray-700 border-gray-700 overflow-hidden " key={item.id}>
+            <div className="m-3 border rounded-lg shadow bg-gray-700 border-gray-700 overflow-hidden " key={item.id}>
                 <div className='h-40 sm:h-70 p-5 bg-white flex justify-center items-center overflow-hidden'>
                     <img className=''  layout="fill" objectFit="cover" src={item.imageUrl} alt="" />
                 </div>
-              <div className="p-5 flex flex-col gap-3">
-                    <h5 className=" text-2xl font-bold tracking-tight text-white">{item.name}</h5>
-                    <p className=" font-normal text-gray-400">{item.category}</p>
-                    <button className="bg-green-400 rounded-md p-2 ml-auto" onClick={() => handleAddProduct(item)}>
-                        Rs. {item.price}
-                    </button>
+              <div className="p-2 flex flex-col justify-center gap-1">
+                    <h5 className=" text-xl font-medium tracking-tight text-white">{item.name}</h5>
+
+                    <p className=" truncate text-slate-400 "> {item.category}</p>
+
+                    <div className='grid grid-cols-2  items-center'>
+                      <div className='text-2xl p-2 text-white font-medium'>
+                        <p className=''>₹ {item.price}</p>
+                      </div>
+                      
+                      <div className='p-2'>
+                        <button className="flex-wrap flex bg-green-400 lg:p-1 p-1 sm:p-2 hover:bg-green-500 rounded-md" onClick={
+                          () => {
+                            handleAddProduct(item);
+                            Alert();
+                          }}>
+                            Add to Cart</button>
+                      </div>
+                      <ToastContainer closeButton={false} closeOnClick={false}/>
+                    </div>
+                    
               </div>
             </div>
 

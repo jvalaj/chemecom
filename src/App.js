@@ -40,6 +40,10 @@ const App = () => {
     }
   };
 
+  const clearProduct = (product) => {
+    setCartItems(cartItems.filter((item) => item.id !== product.id));
+  };
+
   return (
     <Router>
       <Navbar/>
@@ -48,7 +52,7 @@ const App = () => {
         <Route path='/product/:id' element ={ <Product/>}/>
         <Route path='/products' element ={ <Products handleAddProduct={handleAddProduct}/>}/>
         <Route path='/about' element ={ <About/>}/>
-        <Route path='/cart' element ={ <Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} /> }/>
+        <Route path='/cart' element ={ <Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} clearProduct={clearProduct}/> }/>
 
         <Route path='/login' element ={ <Login/>}/>
         <Route path='/signup' element ={ <Signup/>}/>
