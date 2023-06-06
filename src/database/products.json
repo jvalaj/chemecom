@@ -40,5 +40,12 @@
         "id":"digene",
         "category":"General Medication",
         "imageUrl":"https://assets.lybrate.com/img/otc/product/digene-oral-gel-mint-0"
+    },
+    {
+        "name":"Rishi's Med",
+        "price":"999",
+        "id":"rishi med",
+        "category":"Personal Medication",
+        "imageUrl":"https://images.unsplash.com/photo-1654722658162-e7f6b2d235ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
     }
 ]
