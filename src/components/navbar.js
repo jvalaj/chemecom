@@ -13,10 +13,10 @@ const Navbar = () => {
 
         <nav className=" border-gray-200 bg-gray-800">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="#" className="flex items-center">
+                <div className="flex items-center">
                     <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
                     <span className=" text-2xl text-white">Chem Shop</span>
-                </a>
+                </div>
 
                 <ul className='hidden sm:flex sm:gap-8 sm:text-white'>
                     <li className="hover:text-teal-400 text-white">

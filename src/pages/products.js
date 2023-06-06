@@ -32,7 +32,7 @@ const Products = ({handleAddProduct}) => {
           
             <div className="m-3 border rounded-lg shadow bg-gray-700 border-gray-700 overflow-hidden " key={item.id}>
                 <div className='h-40 sm:h-70 p-5 bg-white flex justify-center items-center overflow-hidden'>
-                    <img className=''  layout="fill" objectFit="cover" src={item.imageUrl} alt="" />
+                    <img className=''  layout="fill" objectFit="cover" src={item.imageUrl}  alt="image description" />
                 </div>
               <div className="p-2 flex flex-col justify-center gap-1">
                     <h5 className=" text-xl font-medium tracking-tight text-white">{item.name}</h5>

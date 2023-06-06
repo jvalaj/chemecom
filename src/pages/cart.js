@@ -22,7 +22,7 @@ const Cart = ({ cartItems, handleAddProduct , handleRemoveProduct , clearProduct
     
                 <div key={item.id} className="w-full h-70 border grid md:grid-cols-5 my-2 border-black">
                     <div className="sm:h-50 p-5 bg-slate-200 flex items-center justify-center overflow-hidden">
-                        <img layout="fill" objectFit="cover" className="h-[100px] w-[100px]" src={item.imageUrl}/>
+                        <img  alt="image description" layout="fill" objectFit="cover" className="h-[100px] w-[100px]" src={item.imageUrl}/>
                     </div>
                     <div className="p-3 flex flex-col bg-slate-300 justify-center">
                         <h2 className="font-semibold text-xl">{item.name}</h2>
