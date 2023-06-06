@@ -21,7 +21,8 @@ const Products = ({handleAddProduct}) => {
           <div className='w-full flex items-center justify-center mx-auto'>
           <input placeholder=" Enter your required medicine here" className='w-full rounded-md border p-2 border-black m-4 '/>
 
-          <button className='bg-blue-600 text-white rounded-md p-2 my-4 mr-4'> Search </button>
+          <button className='bg-blue-600 text-white rounded-md p-2 my-4 mr-4'> Search Button </button>
+
 
           </div>
 
